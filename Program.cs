@@ -1,5 +1,4 @@
-﻿using Internal;
-using System;
+﻿using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -27,8 +26,9 @@ class Client
         while (true)
         {
             // Sending message to the server
-            string clientMessage = Console.ReadLine();
-            byte[] temp = Encoding.ASCII.GetBytes(clientMessage);
+            Console.Write("Test input: ");
+            clientMessage = Console.ReadLine();
+            temp = Encoding.ASCII.GetBytes(clientMessage);
             clientSocket.Send(temp);
         }
         
